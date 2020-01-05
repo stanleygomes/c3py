@@ -58,11 +58,13 @@ To file a new a feature
 
 These are some of patterns definitions to help us to keep a default arquitecture.
 
+- Recommended editor: [VS Code](https://code.visualstudio.com), use [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) by Microsoft
 - Package manager: [PyPI](https://pypi.org/), sure
 - Python version: [v3.8.x](https://www.python.org/downloads)
 - Python Framework: [Django](https://www.djangoproject.com) framework
 - Python server: 
-- Linter: 
+- Linter: [PyLint](https://pypi.org/project/pylint)
+- Formater: [autopep8](https://pypi.org/project/autopep8/0.8)
 - Database: 
 - Migrations: Run on a container described in docker-compose file: [image](https://hub.docker.com) image
 - i18n: 
