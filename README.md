@@ -43,7 +43,14 @@ Via docker-compose (start database, run migrations and start server)
 docker-compose up
 ```
 
-To test it on the browser, simply go to: `http://localhost:8000`
+Now you're ready to go. Open your browser: `http://localhost:8000`
+
+## Extra [recommended] steps
+
+Make sure you have installed:
+
+- [PyLint](https://pypi.org/project/pylint) to help you with some syntax errors
+- [autopep8](https://pypi.org/project/autopep8/0.8) to beautify your code
 
 ## Git flow
 
