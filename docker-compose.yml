@@ -1,0 +1,36 @@
+version: '3.1'
+services:
+  postgres:
+    image: postgres:10-alpine
+    container_name: postgres10
+    environment:
+      POSTGRES_PASSWORD: c3py
+      POSTGRES_USER: c3py
+      POSTGRES_DB: c3py
+    stdin_open: true
+    tty: true
+    ports:
+      - 5432:5432/tcp
+    volumes:
+      - ./docker/postgres/data:/var/lib/postgresql
+  pg-flyway:
+    container_name: pg-flyway
+    image: boxfuse/flyway:5.2.4
+    command: -url=jdbc:postgresql://postgres/c3py -schemas=c3py -user=c3py -password=c3py migrate
+    volumes:
+      - ./docker/pg-flyway/migrations:/flyway/sql
+    depends_on:
+      - postgres
+  python3:
+    build:
+      dockerfile: ./docker/python3-alpine/Dockerfile
+      context: ./
+    image: python3:v1
+    container_name: python3
+    ports:
+      - 8000:8000
+      - 443:8000
+    volumes:
+      - ./:/app
+    depends_on:
+      - pg-flyway
