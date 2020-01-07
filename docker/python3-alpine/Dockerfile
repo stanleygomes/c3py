@@ -2,9 +2,7 @@
 FROM python:3.7-alpine
 
 # install some OS packages
-RUN apk update \
-  && apk upgrade \
-  && apk add bash bash-completion
+RUN apk --no-cache add bash bash-completion
 
 # create app folder
 RUN mkdir /app
