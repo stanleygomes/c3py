@@ -27,20 +27,20 @@ git clone https://github.com/c3py/c3py.git && cd c3py
 ### Install dependencies
 
 ```bash
+pip3 install -r requirements.txt
 
 ```
 
 ### Start server
 
 ```bash
-
-
+python3 src/manager.py runserver
 ```
 
 Via docker-compose (start database, run migrations and start server)
 
 ```bash
-docker-compose up
+docker-compose up --build
 ```
 
 Now you're ready to go. Open your browser: `http://localhost:8000`
@@ -81,6 +81,7 @@ These are some of patterns definitions to help us to keep a default arquitecture
 - Http Request: 
 - Authentication: 
 - SMTP email: 
+- XLS sheets: 
 - Docker compose and dockerfile attached running migrations e starting database and python server
 
 ## Project structure
