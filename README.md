@@ -31,6 +31,12 @@ pip3 install -r requirements.txt
 
 ```
 
+### Get enviroment variables
+
+```
+cp .env.template .env
+```
+
 ### Start server
 
 ```bash
