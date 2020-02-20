@@ -94,6 +94,8 @@ These are some of patterns definitions to help us to keep a default arquitecture
 
 Basic folder structure
 
+## pending definition
+
 - **src/config**: App config (some of these are inherited from .env file), constants, configuration and i18n
 - **src/api**: Endpoints and business logic
 - **src/static**: Images, styles, fonts and other files that can be served
