@@ -16,11 +16,12 @@ COPY requirements.txt /app
 # set path to app's folder
 WORKDIR /app
 
+# config venv inside repo
+RUN python3 -m venv venv && \
+  source venv/bin/activate
+
 # install dependencies for python
 RUN pip3 install -r requirements.txt
-
-# config venv inside repo
-RUN python3 -m venv venv
 
 # port to run application
 EXPOSE 8000
