@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import os
+from flask_cors import CORS
 from flask import Flask, g
 from dotenv import load_dotenv
 
@@ -11,6 +12,7 @@ if __name__ == "__main__":
 
   # flask instance
   app = Flask(__name__)
+  CORS(app)
 
   # app config
   http_host = config.http_host()
