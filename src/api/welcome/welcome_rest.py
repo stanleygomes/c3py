@@ -1,8 +1,10 @@
-from flask import Blueprint, jsonify, request, abort
+from flask import Blueprint, escape, request
 
-welcome_rest_api = Blueprint('welcome_rest_api', 'welcome_rest_api', url_prefix='/welcome')
+welcome_api = Blueprint('welcome_api', __name__, url_prefix='/welcome')
 
 
-@welcome_rest_api.route('/', methods=['GET'])
+@welcome_api.route('/', methods=['GET'])
 def index():
-  return 'hello world!'
+  # return redirect(url_for('dashboard')
+  name = request.args.get('name', 'World')
+  return f'Hello, {escape(name)}!'
