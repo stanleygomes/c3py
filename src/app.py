@@ -6,6 +6,7 @@ from flask import Flask, g
 from dotenv import load_dotenv
 
 import utils.config as config
+import routes.routes as routes
 
 if __name__ == "__main__":
   load_dotenv()
@@ -13,6 +14,9 @@ if __name__ == "__main__":
   # flask instance
   app = Flask(__name__)
   CORS(app)
+
+  # app routes
+  routes.init(app)
 
   # app config
   http_host = config.http_host()
