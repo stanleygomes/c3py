@@ -2,7 +2,7 @@ import os
 
 
 def http_port():
-  p = os.getenv('HTTP_PORT', '7000')
+  p = os.getenv('HTTP_PORT', '8000')
   return int(p)
 
 

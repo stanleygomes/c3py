@@ -5,7 +5,7 @@ FROM python:3.7-alpine
 RUN apk --no-cache add bash bash-completion
 
 # install gcc
-RUN apk add build-base
+RUN apk --no-cache add build-base
 
 # create app folder
 RUN mkdir /app
@@ -17,8 +17,7 @@ COPY requirements.txt /app
 WORKDIR /app
 
 # config venv inside repo
-RUN python3 -m venv venv && \
-  source venv/bin/activate
+RUN python3 -m venv venv && source venv/bin/activate
 
 # install dependencies for python
 RUN pip3 install -r requirements.txt
