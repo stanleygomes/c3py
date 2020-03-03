@@ -4,6 +4,9 @@ FROM python:3.7-alpine
 # install some OS packages
 RUN apk --no-cache add bash bash-completion
 
+# install gcc
+RUN apk --no-cache add build-base
+
 # create app folder
 RUN mkdir /app
 
@@ -13,6 +16,9 @@ COPY requirements.txt /app
 # set path to app's folder
 WORKDIR /app
 
+# config venv inside repo
+RUN python3 -m venv venv && source venv/bin/activate
+
 # install dependencies for python
 RUN pip3 install -r requirements.txt
 
@@ -20,4 +26,4 @@ RUN pip3 install -r requirements.txt
 EXPOSE 8000
 
 # start server
-CMD ["python3", "src/manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["python3", "src/app.py"]

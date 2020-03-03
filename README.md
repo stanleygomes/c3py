@@ -2,7 +2,7 @@
 
 # C3PY
 
-Excuse me, sir.
+Excuse me, sir. I'm a python boilerplate.
 
 The main goal of **C3PY** is to set patterns to be easily implemented on Python projects. We want to make easy to quick start a Python enviroment with the basic resources every project could have. Check out the patterns we defined this document bellow.
 
@@ -40,7 +40,7 @@ cp .env.template .env
 ### Start server
 
 ```bash
-python3 src/manager.py runserver
+python3 src/app.py
 ```
 
 Via docker-compose (start database, run migrations and start server)
@@ -74,7 +74,7 @@ These are some of patterns definitions to help us to keep a default arquitecture
 - Recommended editor: [VS Code](https://code.visualstudio.com), use [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) by Microsoft
 - Package manager: [PyPI](https://pypi.org/), sure
 - Python version: [v3.8.x](https://www.python.org/downloads)
-- Python Framework: [Django](https://www.djangoproject.com) framework
+- Python Framework: [Flask](https://palletsprojects.com/p/flask/) framework
 - Python server: 
 - Linter: [PyLint](https://pypi.org/project/pylint)
 - Formater: [autopep8](https://pypi.org/project/autopep8/0.8)
