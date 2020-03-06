@@ -96,11 +96,9 @@ Basic folder structure
 
 ## pending definition
 
-- **src/config**: App config (some of these are inherited from .env file), constants, configuration and i18n
 - **src/api**: Endpoints and business logic
 - **src/static**: Images, styles, fonts and other files that can be served
-- **src/middlewares**: Middlewares for routes
 - **src/routes**: Routes, :]
 - **src/templates**: mustache interpreted files
-- **src/test**: Mocha and chai unity tests
-- **src/utils**: Utilities and modules superior layer implementations
+- **src/test**: Unity tests
+- **src/utils**: App config, constants, configuration and i18n, utilities and modules superior layer implementations
